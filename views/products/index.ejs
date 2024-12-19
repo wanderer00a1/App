@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1><%= category %> Products </h1>
+    <form action="/products" method="get">
+        <select name="category" id="category">
+            <% for( let category of categories){ %>
+                <option value="<%= category %>" <%= category === category ? 'selected' : '' %>><%= category %></option>
+            <% } %>
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+    <ul>
+        <% for(let product of products) {%>
+        <li><a href="/products/<%=product._id%>"><%= product.name %></a></li>
+        <% } %>
+    </ul>
+    <button><a href="products/new" >Create Product</a></button>
+    <%if(category != 'All'){ %>
+    <button><a href="products">All Product</a></button>
+    <% } %>
+</body>
+</html>
