@@ -1,17 +1,27 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-image: url('https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     margin: 20px;
     padding: 10px;
+    color: #333;
 }
 
 h1 {
-    color: #343a40;
+    color: #ffffff;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 form {
     margin: 20px 0;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button {
@@ -21,35 +31,107 @@ button {
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
-}
-
-button a {
-    color: white;
-    text-decoration: none; /* Ensure no underline */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button a {
+    color: white;
+    text-decoration: none;
 }
 
 button:hover a {
-    text-decoration: none; /* Disable underline when hovering over the button */
+    text-decoration: none;
 }
+
+
+select {
+    width: 200px; 
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+select:focus {
+    outline: none;
+    border-color: #2980b9;
+    box-shadow: 0 0 8px rgba(41, 128, 185, 0.3);
+}
+
+
+select option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+select:hover {
+    border-color: #2980b9;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #2980b9;
+}
+
 
 ul {
     list-style-type: none;
     padding: 0;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
 }
 
 ul li {
     margin: 10px 0;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li a:hover,
+ul li a:focus,
+ul li a:active {
+    text-decoration: none;
 }
 
 a {
     text-decoration: none;
     color: #007bff;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #0056b3;
 }
+
