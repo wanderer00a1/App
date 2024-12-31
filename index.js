@@ -23,6 +23,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
+function handleAsync(fn){
+    return function(req,res,next){
+      fn(req,res,next).catch(e => next(e));
+    }
+  }
+
 app.get('/products', handleAsync(async (req, res, next) => {
   const { category } = req.query;
   if (category) {
